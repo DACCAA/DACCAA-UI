@@ -1,6 +1,6 @@
 /* 
    DACCAA UI 
-   Version 1.1.0
+   Version 1.2.0
    (C) DACCAA 2018
    https://daccaa.com/UI/
 */
@@ -67,6 +67,10 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
 
 /* end of reset */
 /* Start of UI elements */
+
+a {
+  color: #0099cc;
+}
 
 .content {
    padding: 30px;
@@ -165,7 +169,7 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
    color: black;
    max-width: 300px;
    border-radius: 3px;
-   padding: 20px;
+   padding: 30px;
    vertical-align: top;
    margin-top: 10px;
    margin-right: 10px;
@@ -244,8 +248,8 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
 
 
 .space {
-   margin-top: 10px;
-   margin-bottom: 10px;
+   margin-top: 10px !important;
+   margin-bottom: 10px !important;
 }
 
 .space-right {
@@ -325,7 +329,7 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
    font-weight: bold;
 }
 
-.ui-enabled input[type="text"], .ui-enabled input[type="number"], .ui-enabled input[type="email"], .ui-enabled input[type="tel"], .ui-enabled input[type="password"], .ui-enabled input[type="search"] {
+.ui-enabled input[type="text"], .ui-enabled input[type="url"], .ui-enabled input[type="number"], .ui-enabled input[type="email"], .ui-enabled input[type="tel"], .ui-enabled input[type="password"], .ui-enabled input[type="search"] {
    border: solid 1px white;
    border-radius: 3px;
    padding: 20px;
@@ -334,7 +338,7 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
    outline: none;
 }
 
-.ui-enabled input[type="text"]:focus, .ui-enabled input[type="number"]:focus, .ui-enabled input[type="email"]:focus, .ui-enabled input[type="tel"]:focus, .ui-enabled input[type="password"]:focus, .ui-enabled input[type="search"]:focus {
+.ui-enabled input[type="text"]:focus, .ui-enabled input[type="url"]:focus, .ui-enabled input[type="number"]:focus, .ui-enabled input[type="email"]:focus, .ui-enabled input[type="tel"]:focus, .ui-enabled input[type="password"]:focus, .ui-enabled input[type="search"]:focus {
    border: solid 1px #0099cc;
 }
 
@@ -399,19 +403,19 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
    border: none;
 }
 
-.white-bg input[type="text"], .white-bg input[type="number"], .white-bg input[type="search"], .white-bg input[type="password"], .white-bg input[type="tel"], .white-bg input[type="email"], .white-bg select, .white-bg textarea {
+.white-bg input[type="text"], .white-bg input[type="url"], .white-bg input[type="number"], .white-bg input[type="search"], .white-bg input[type="password"], .white-bg input[type="tel"], .white-bg input[type="email"], .white-bg select, .white-bg textarea {
 	border: solid 1px black !important;
 }
 
-.white-bg input[type="text"]:focus, .white-bg input[type="number"]:focus, .white-bg input[type="search"]:focus, .white-bg input[type="password"]:focus, .white-bg input[type="tel"]:focus, .white-bg input[type="email"]:focus, .white-bg select:focus, .white-bg textarea:focus {
+.white-bg input[type="text"]:focus, .white-bg input[type="url"]:focus, .white-bg input[type="number"]:focus, .white-bg input[type="search"]:focus, .white-bg input[type="password"]:focus, .white-bg input[type="tel"]:focus, .white-bg input[type="email"]:focus, .white-bg select:focus, .white-bg textarea:focus {
 	border: solid 1px #0099cc !important;
 }
 
-.glass-bg input[type="text"], .glass-bg input[type="search"], .glass-bg input[type="number"], .glass-bg input[type="password"], .glass-bg input[type="tel"], .glass-bg input[type="email"], .glass-bg select, .glass-bg textarea {
+.glass-bg input[type="text"], .glass-bg input[type="url"], .glass-bg input[type="search"], .glass-bg input[type="number"], .glass-bg input[type="password"], .glass-bg input[type="tel"], .glass-bg input[type="email"], .glass-bg select, .glass-bg textarea {
 	border: solid 1px black !important;
 }
 
-.glass-bg input[type="text"]:focus, .glass-bg input[type="search"]:focus, .glass-bg input[type="number"]:focus, .glass-bg input[type="password"]:focus, .glass-bg input[type="tel"]:focus, .glass-bg input[type="email"]:focus, .glass-bg select:focus, .glass-bg textarea:focus {
+.glass-bg input[type="text"]:focus, .glass-bg input[type="url"]:focus, .glass-bg input[type="search"]:focus, .glass-bg input[type="number"]:focus, .glass-bg input[type="password"]:focus, .glass-bg input[type="tel"]:focus, .glass-bg input[type="email"]:focus, .glass-bg select:focus, .glass-bg textarea:focus {
 	border: solid 1px #0099cc !important;
 }
 
@@ -430,8 +434,16 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
    padding-top: 40px;
 }
 
+.float-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .fill {
    min-height: 100%;
+   height: 1px;
    width: 100%;
 }
 
@@ -494,7 +506,7 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
 }
 
 .centre {
-   display: flex;
+   display: flex !important;
    flex-flow: row wrap;
    justify-content: center;
    align-items: center;
@@ -831,12 +843,192 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
 }
 
 
+.section {
+  width: 100%;
+  text-align: center;
+}
+
+.section .col-3 {
+  width: calc((100% / 3) - 3px);
+  display: inline-block;
+  vertical-align: top;
+  padding: 20px;
+}
+
+.section .col-3 .heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.section .larger-height {
+  height: 300px;
+}
+
+.full-height {
+  height: 100%;
+}
+
+
+.full-video {
+	width: 100%;
+	border: none;
+	height: 600px;
+}
+
+
+.max-width-600 {
+	max-width: 600px;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+.max-width-800 {
+	max-width: 800px;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+.max-width-1000 {
+	max-width: 1000px;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+.max-width-1200 {
+	max-width: 1200px;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+.max-width-1600 {
+	max-width: 1600px;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+}
+
+.login-card {
+	padding: 30px;
+	background-color: white;
+	display: inline-block;
+	max-width: 400px;
+	width: 100%;
+	border-radius: 3px;
+	box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.5);
+}
+
+/*
+
+table, th, tr, td {
+	border: solid 1px black;
+	border-collapse: collapse;
+}
+
+table {
+	background-color: #85DCFF;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid 2px black;
+	min-width: 80%;
+}
+
+th {
+	background-color: #22B5F0;
+	color: black;
+	font-size: 15px;
+}
+
+td {
+	font-size: 13px;
+}
+
+td, th {
+	padding: 10px;
+}
+
+*/
+
+table, th, tr, td {
+	border-collapse: collapse;
+  border: none;
+}
+
+table {
+   border: none;
+   width: 100%;
+   margin-top: 20px;
+}
+
+tr {
+	background: white;
+}
+
+th, td {
+   padding: 20px;
+  text-align: center;
+}
+
+th {
+   font-size: 22px;
+   background: #0099cc;
+   color: white;
+}
+
+tr:nth-child(even) {
+    background: #ebebee;
+}
 
 
 
+ul {
+  padding-left: 30px;
+}
 
 
+.sub {
+  font-size: 22px;
+  font-weight: bold;
+}
 
+.version {
+  width: 100%;
+  background-color: white;
+  box-shadow: 2px 3px 40px rgba(0, 0, 0, 0.2) !important;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.straight {
+  border-radius: 0 !important;
+}
+
+
+.daccaa-experiments {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #0099cc;
+  background: linear-gradient(#0099cc, #006699);
+  color: white;
+  border-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.4);
+}
 
 
 
@@ -844,7 +1036,7 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
 /* Start of Colours */
 
 .shadow {
-   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.7) !important;
+   box-shadow: 2px 3px 40px rgba(0, 0, 0, 0.2) !important;
 }
 
 .shadow-txt {
@@ -1209,6 +1401,29 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
 	  color: #FF0000 !important;
 }
 
+.facebook-bg {
+  background-color: #3b5998 !important;
+  color: white;
+}
+
+.facebook-bg-hov {
+  background-color: #3b5998 !important;
+  color: white;
+}
+
+.facebook-bg-hov:hover {
+  background-color: #2A3F6B !important;
+}
+
+.facebook-txt {
+  color: #3b5998 !important;
+}
+
+
+.daccaa-bg {
+	background: url(https://daccaa.com/drive/uploads/49/t8ugycyd5zfu6kexlbgmxb0cdt9pwv/DACCAArainbowMiddle.png) no-repeat center center fixed;
+  background-size: cover;
+}
 
 
 
@@ -1254,7 +1469,27 @@ a, input, textarea, select, button, .glass-bg-hov, .gentle-bg-hov, .soft-bg-hov,
 	.popup {
 		max-height: 100% !important;
 	}
+  
+  .image .layer .holder { 
+    font-size: 40px !important; 
+  }
 	
+}
+
+@media screen and (max-width: 600px) { 
+  .section .col-3 {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .section .larger-height {
+    height: auto;
+  }
+  
+  .section .col-3:nth-child(even) {
+    background-color: #ddeeff;
+  }
+  
 }
 
 @media screen and (max-width: 350px) { 
